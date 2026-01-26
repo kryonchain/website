@@ -26,7 +26,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ scrollY, onGetStartedC
                     <img
                         src="/logo.png"
                         alt="Kryon Logo"
-                        className="w-80 h-80 relative object-contain drop-shadow-2xl"
+                        className="h-80 relative object-contain drop-shadow-2xl"
                         style={{
                             filter: 'drop-shadow(0 0 40px rgba(31, 168, 255, 0.6))'
                         }}
