@@ -1,26 +1,36 @@
-import { Zap, Shield, Layers, TrendingUp } from 'lucide-react';
+import {Zap, Shield, Layers, TrendingUp, Radar, Laptop} from 'lucide-react';
 import { Feature, RoadmapPhase, TechStat } from '../types';
 
 export const features: Feature[] = [
     {
         icon: Zap,
         title: 'Lightning Fast',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.'
+        desc: 'Every block counts! Thanks to DAG, we can maximize throughput along with block rewards!'
     },
     {
         icon: Shield,
         title: 'Highly Secure',
-        desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.'
+        desc: 'PoW consensus combined with Tor networking layer'
     },
     {
         icon: Layers,
         title: 'DAG Technology',
-        desc: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.'
+        desc: 'Up to 20 miners can append new blocks in parallel (everyone gets block reward and still secure)'
     },
     {
         icon: TrendingUp,
         title: 'Scalable',
-        desc: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.'
+        desc: "High throughput, more rewards"
+    },
+    {
+        icon: Radar,
+        title: 'ASIC resistant',
+        desc: "Using Yescrypt to don't let big companies dominate mining"
+    },
+    {
+        icon: Laptop,
+        title: 'Laptop-Ready mining',
+        desc: "Earn rewards even from your laptop"
     }
 ];
 
@@ -29,42 +39,55 @@ export const roadmapData: RoadmapPhase[] = [
         phase: 'Q1 2026',
         title: 'Foundation',
         items: [
-            { text: 'Core protocol development', completed: true },
-            { text: 'DAG architecture design', completed: true },
-            { text: 'Testnet launch', completed: false }
+            { text: 'Project vision & architecture defined', completed: true },
+            { text: 'GitHub organization', completed: true },
+            { text: 'Community channels opened (Twitter, GitHub Discussions)', completed: true },
+            { text: 'Branding & visual identity finalized', completed: true },
+            { text: 'Public website', completed: true },
         ]
     },
     {
-        phase: 'Q2 2026',
-        title: 'Development',
+        phase: 'Q1-Q2 2026',
+        title: 'Networking & Privacy Layer',
         items: [
-            { text: 'Smart contract integration', completed: false },
-            { text: 'Wallet development', completed: false },
-            { text: 'Security audits', completed: false }
+            { text: 'LibP2P Tor transport layer (Rust)', completed: false },
+            { text: 'Publish transport crate to crates.io', completed: false },
         ]
     },
     {
-        phase: 'Q3 2026',
-        title: 'Beta',
+        phase: 'Q2-Q3 2026',
+        title: 'Consensus & Core Protocol',
         items: [
+            { text: 'PoW engine', completed: false },
+            { text: 'DAG consensus', completed: false },
+            { text: 'Core Node implementation', completed: false },
+        ]
+    },
+    {
+        phase: 'Q3 end - Q4 2026',
+        title: 'MVP readiness & Testnet Launch',
+        items: [
+            { text: 'UTXO processor', completed: false },
+            { text: 'CLI Miner', completed: false },
+            { text: 'CLI wallet', completed: false },
             { text: 'Public testnet', completed: false },
-            { text: 'Community building', completed: false },
-            { text: 'Partnership announcements', completed: false }
+            { text: 'MVP readiness', completed: false },
         ]
     },
     {
-        phase: 'Q4 2026',
-        title: 'Launch',
+        phase: 'Post-MVP',
+        title: 'Mainnet launch',
         items: [
-            { text: 'Mainnet release', completed: false },
-            { text: 'Exchange listings', completed: false },
-            { text: 'Ecosystem expansion', completed: false }
+            { text: 'Fixing Testnet issues', completed: false },
+            { text: 'GUI Wallet', completed: false },
+            { text: 'GUI Miner', completed: false },
+            { text: 'Public Mainnet', completed: false },
         ]
     }
 ];
 
 export const techStats: TechStat[] = [
-    { value: '1000+', label: 'High Throughput' },
-    { value: '2000+', label: 'Low Latency' },
-    { value: '3000+', label: 'Energy Efficient' }
+    { value: '1 block / second', label: 'High Throughput' },
+    { value: '20', label: 'Reward winners at the same time' },
+    { value: 'Yescrypt hashing', label: 'ASIC resistance' },
 ];

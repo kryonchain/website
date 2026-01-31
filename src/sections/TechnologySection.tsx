@@ -24,7 +24,7 @@ export const TechnologySection: React.FC<TechnologySectionProps> = ({ techStats 
 
                 <AnimatedSection delay={100}>
                     <p className="text-center text-xl text-gray-300 mb-16 max-w-3xl mx-auto">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Powerful, rock-solid yet simple and not overcomplicated technology
                     </p>
                 </AnimatedSection>
 

@@ -36,18 +36,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ scrollY, onGetStartedC
                 <h1 className="text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-blue-300 to-blue-500 bg-clip-text text-transparent">
                     KRYON
                 </h1>
-                <p className="text-2xl mb-8 text-blue-200">Next-Generation PoW DAG Blockchain</p>
+                <p className="text-2xl mb-8 text-blue-200">A Privacy-First DAG Blockchain Built in Rust</p>
                 <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-12">
-                    Revolutionizing distributed ledger technology with unprecedented speed, security, and scalability through our innovative DAG architecture.
+                    Tor-based networking combined with PoW-secured DAG consensus, designed for long-term sustainability.
                 </p>
 
                 <div className="flex gap-4 justify-center flex-wrap mb-16">
                     <PrimaryButton onClick={onGetStartedClick}>
                         Get Started
                     </PrimaryButton>
-                    <SecondaryButton onClick={onGetStartedClick}>
-                        Learn More
-                    </SecondaryButton>
+                </div>
+
+                <div className="flex gap-4 justify-center flex-wrap mb-16">
                     <SocialButton href="https://github.com/kryonchain" icon={() => <Github size={20} />} theme="github">
                         GitHub
                     </SocialButton>

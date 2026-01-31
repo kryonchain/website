@@ -9,11 +9,9 @@ export const Footer: React.FC = () => {
                 <div className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
                     KRYON
                 </div>
-                <p className="text-gray-400 mb-4">Next-Generation PoW DAG Blockchain</p>
+                <p className="text-gray-400 mb-4">A Privacy-First DAG Blockchain Built in Rust</p>
                 <div className="flex justify-center gap-6 text-sm text-gray-500 mb-6">
-                    <a href="#" className="hover:text-blue-400 transition-colors">Privacy Policy</a>
-                    <a href="#" className="hover:text-blue-400 transition-colors">Terms of Service</a>
-                    <a href="#" className="hover:text-blue-400 transition-colors">Contact</a>
+                    <a href="mailto:info@kryonchain.com" className="hover:text-blue-400 transition-colors">Contact</a>
                 </div>
                 <div className="flex justify-center gap-6 mb-6">
                     <a

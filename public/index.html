@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#2860ab"/>
     <meta
       name="description"
-      content="Kryon - the next generation PoW DAG blockchain"
+      content="Kryon - A Privacy-First DAG Blockchain Built in Rust"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
@@ -24,7 +24,26 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Kryon - the next generation PoW DAG blockchain</title>
+    <title>Kryon - A Privacy-First DAG Blockchain Built in Rust</title>
+    <script>
+      function subscribeFormCallback() {
+        window.senderForms.render("e0R7RK");
+      }
+    </script>
+    <script>
+      (function (s, e, n, d, er) {
+        s['Sender'] = er;
+        s[er] = s[er] || function () {
+          (s[er].q = s[er].q || []).push(arguments)
+        }, s[er].l = 1 * new Date();
+        var a = e.createElement(n),
+                m = e.getElementsByTagName(n)[0];
+        a.async = 1;
+        a.src = d;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js?explicit=true&onload=subscribeFormCallback', 'sender');
+      sender('a963491c076628')
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
