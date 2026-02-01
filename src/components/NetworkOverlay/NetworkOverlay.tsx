@@ -27,7 +27,6 @@ const NetworkOverlay: React.FC<{ nodeCount?: number }> = ({ nodeCount = 200 }) =
         setCanvasSize();
         window.addEventListener('resize', setCanvasSize);
 
-        // Node-ok létrehozása
         nodesRef.current = Array.from({ length: nodeCount }).map(() => ({
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,
@@ -46,27 +45,22 @@ const NetworkOverlay: React.FC<{ nodeCount?: number }> = ({ nodeCount = 200 }) =
 
             const nodes = nodesRef.current;
 
-            // Pontok mozgatása finom hullámokkal
             nodes.forEach(node => {
                 node.x += node.vx + Math.sin(node.phaseX) * 0.3;
                 node.y += node.vy + Math.sin(node.phaseY) * 0.3;
 
-                // Hullámfázis frissítés
                 node.phaseX += 0.01;
                 node.phaseY += 0.01;
 
-                // Falhoz ütközés
                 if (node.x < 0 || node.x > canvas.width) node.vx *= -1;
                 if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
 
-                // Pont rajzolása
                 ctx.beginPath();
                 ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
                 ctx.fillStyle = 'rgba(0, 150, 255, 0.4)';
                 ctx.fill();
             });
 
-            // Kapcsolatok vonalakkal sűrű háló
             for (let i = 0; i < nodes.length; i++) {
                 for (let j = i + 1; j < nodes.length; j++) {
                     const dx = nodes[i].x - nodes[j].x;
@@ -98,7 +92,6 @@ const NetworkOverlay: React.FC<{ nodeCount?: number }> = ({ nodeCount = 200 }) =
     return (
         <div className="fixed inset-0 z-10 pointer-events-none overflow-hidden">
             <canvas ref={canvasRef} className="w-full h-full" />
-            {/* Félátlátszó overlay */}
             <div className="absolute inset-0 bg-black opacity-20"></div>
         </div>
     );
