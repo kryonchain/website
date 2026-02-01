@@ -7,6 +7,7 @@ import { SubscribeSection } from './sections/SubscribeSection';
 import { Footer } from './sections/Footer';
 import { features, roadmapData, techStats } from './data/config';
 import './App.css';
+import NetworkOverlay from "./components/NetworkOverlay/NetworkOverlay";
 
 const App: React.FC = () => {
     const [scrollY, setScrollY] = useState<number>(0);
@@ -28,7 +29,10 @@ const App: React.FC = () => {
     };
 
     return (
-        <div className="overflow-hidden bg-gradient-to-b from-gray-900 via-blue-950 to-gray-900 text-white min-h-screen">
+        <div className="relative">
+            <NetworkOverlay nodeCount={120} />
+
+            <div className="overflow-hidden relative bg-gradient-to-b from-gray-900 via-blue-950 to-gray-900 text-white min-h-screen">
                     <HeroSection scrollY={scrollY} onGetStartedClick={scrollToFeatures}
                                  onGetNotifiedClick={scrollToSubscribe}/>
                     <FeaturesSection features={features} featuresRef={featuresRef}/>
@@ -37,7 +41,8 @@ const App: React.FC = () => {
                     <SubscribeSection subscribeRef={subscribeRef}/>
                     <Footer/>
             </div>
+        </div>
             );
-            };
+};
 
-            export default App;
+export default App;

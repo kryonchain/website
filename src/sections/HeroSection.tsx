@@ -22,8 +22,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ scrollY, onGetStartedC
             />
 
             <div className="relative z-10 text-center px-4 animate-fadeIn">
-                <div className="mb-8 relative inline-block">
-                    <div className="absolute inset-0 bg-blue-500 blur-3xl opacity-50 animate-pulse" />
+                <div className="relative inline-block">
+                    <div className="absolute inset-0 opacity-50 animate-pulse" />
                     <img
                         src="/logo.png"
                         alt="Kryon Logo"
