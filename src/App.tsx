@@ -28,8 +28,7 @@ const App: React.FC = () => {
     };
 
     return (
-        <div
-            className="overflow-hidden bg-gradient-to-b from-gray-900 via-blue-950 to-gray-900 text-white min-h-screen">
+        <div className="overflow-hidden bg-gradient-to-b from-gray-900 via-blue-950 to-gray-900 text-white min-h-screen">
                     <HeroSection scrollY={scrollY} onGetStartedClick={scrollToFeatures}
                                  onGetNotifiedClick={scrollToSubscribe}/>
                     <FeaturesSection features={features} featuresRef={featuresRef}/>
