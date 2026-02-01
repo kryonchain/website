@@ -1,7 +1,6 @@
 {
   "name": "website",
   "version": "0.1.0",
-  "homepage": "https://kryonchain.com",
   "private": true,
   "dependencies": {
     "@lucide/lab": "^0.1.2",
