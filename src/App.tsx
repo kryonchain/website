@@ -11,6 +11,7 @@ import './App.css';
 const App: React.FC = () => {
     const [scrollY, setScrollY] = useState<number>(0);
     const featuresRef = useRef<HTMLElement>(null);
+    const subscribeRef = useRef<HTMLElement>(null);
 
     useEffect(() => {
         const handleScroll = () => setScrollY(window.scrollY);
@@ -22,16 +23,22 @@ const App: React.FC = () => {
         featuresRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     };
 
-    return (
-        <div className="overflow-hidden bg-gradient-to-b from-gray-900 via-blue-950 to-gray-900 text-white min-h-screen">
-            <HeroSection scrollY={scrollY} onGetStartedClick={scrollToFeatures}/>
-            <FeaturesSection features={features} featuresRef={featuresRef}/>
-            <TechnologySection techStats={techStats}/>
-            <RoadmapSection roadmapData={roadmapData}/>
-            <SubscribeSection />
-            <Footer/>
-        </div>
-    );
-};
+    const scrollToSubscribe = () => {
+        subscribeRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
 
-export default App;
+    return (
+        <div
+            className="overflow-hidden bg-gradient-to-b from-gray-900 via-blue-950 to-gray-900 text-white min-h-screen">
+                    <HeroSection scrollY={scrollY} onGetStartedClick={scrollToFeatures}
+                                 onGetNotifiedClick={scrollToSubscribe}/>
+                    <FeaturesSection features={features} featuresRef={featuresRef}/>
+                    <TechnologySection techStats={techStats}/>
+                    <RoadmapSection roadmapData={roadmapData}/>
+                    <SubscribeSection subscribeRef={subscribeRef}/>
+                    <Footer/>
+            </div>
+            );
+            };
+
+            export default App;

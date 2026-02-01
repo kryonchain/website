@@ -1,5 +1,5 @@
 import React from 'react';
-import {ChevronDown, Github, XIcon} from 'lucide-react';
+import {BellRing, BellRingIcon, ChevronDown, Github, Icon, XIcon} from 'lucide-react';
 import PrimaryButton from "../components/PrimaryButton/PrimaryButton";
 import SecondaryButton from "../components/SecondaryButton/SecondaryButton";
 import SocialButton from "../components/SocialButton/SocialButton";
@@ -7,9 +7,10 @@ import SocialButton from "../components/SocialButton/SocialButton";
 interface HeroSectionProps {
     scrollY: number;
     onGetStartedClick: () => void;
+    onGetNotifiedClick: () => void;
 }
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ scrollY, onGetStartedClick }) => {
+export const HeroSection: React.FC<HeroSectionProps> = ({ scrollY, onGetStartedClick, onGetNotifiedClick }) => {
     return (
         <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
             <div
@@ -33,7 +34,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ scrollY, onGetStartedC
                     />
                 </div>
 
-                <h1 className="text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-blue-300 to-blue-500 bg-clip-text text-transparent">
+                <h1 className="text-7xl font-bold mb-6 bg-gradient-to-r text-white bg-clip-text text-transparent">
                     KRYON
                 </h1>
                 <p className="text-2xl mb-8 text-blue-200">A Privacy-First DAG Blockchain Built in Rust</p>
@@ -45,6 +46,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ scrollY, onGetStartedC
                     <PrimaryButton onClick={onGetStartedClick}>
                         Get Started
                     </PrimaryButton>
+                    <button
+                        onClick={onGetNotifiedClick}
+                        className={`inline-flex px-8 py-4 bg-gradient-to-r from-sky-300 to-sky-600 rounded-lg font-semibold hover:from-sky-600 hover:to-sky-700 transition-all transform hover:scale-105 shadow-lg shadow-sky-500/50`}>
+                        <BellRing />&nbsp;Get Notified
+                    </button>
                 </div>
 
                 <div className="flex gap-4 justify-center flex-wrap mb-16">

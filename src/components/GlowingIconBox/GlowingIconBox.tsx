@@ -37,7 +37,7 @@ const GlowingIconBox: React.FC<GlowingIconBoxProps> = ({
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent rounded-lg" />
                 <Icon
                     size={sizeConfig.icon}
-                    className={`relative text-blue-400 group-hover:text-blue-300 transition-all duration-300 group-hover:scale-110 ${animated ? 'animate-pulse' : ''}`}
+                    className={`relative text-white group-hover:text-white transition-all duration-300 group-hover:scale-110 ${animated ? 'animate-pulse' : ''}`}
                     strokeWidth={1.5}
                 />
             </div>

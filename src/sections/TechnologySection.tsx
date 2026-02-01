@@ -17,7 +17,7 @@ export const TechnologySection: React.FC<TechnologySectionProps> = ({ techStats 
                     <div className="mb-6">
                         <GlowingIconBox icon={Layers} size="lg" />
                     </div>
-                    <h2 className="text-5xl font-bold text-center bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+                    <h2 className="text-5xl font-bold text-center bg-gradient-to-r text-white bg-clip-text text-transparent">
                         Revolutionary Technology
                     </h2>
                 </AnimatedSection>

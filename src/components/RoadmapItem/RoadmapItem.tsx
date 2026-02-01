@@ -66,22 +66,22 @@ const RoadmapItem: React.FC<RoadmapItemProps> = ({
         >
             <div
                 ref={ref}
-                className={`p-8 rounded-2xl bg-gradient-to-br from-blue-900/40 to-blue-950/40 border transition-all duration-500 ${
+                className={`p-8 rounded-2xl bg-gradient-to-br from-white/20 to-sky-700/20 border transition-all duration-500 ${
                     isActive
-                        ? 'border-blue-400/70 scale-105 shadow-2xl shadow-blue-500/40'
-                        : 'border-blue-500/30 hover:border-blue-400/50 scale-100'
+                        ? 'border-white/70 scale-105 shadow-2xl shadow-white-500/40'
+                        : 'border-white/30 hover:border-white-400/50 scale-100'
                 }`}
                 style={{
                     boxShadow: isActive ? '0 0 40px rgba(31, 168, 255, 0.5)' : undefined
                 }}
             >
-                <div className="text-blue-400 font-bold text-sm mb-2">{phase}</div>
-                <h3 className="text-3xl font-bold mb-4 text-blue-300">{title}</h3>
+                <div className="text-white font-bold text-sm mb-2">{phase}</div>
+                <h3 className="text-3xl font-bold mb-4 text-white">{title}</h3>
                 <ul className="space-y-3">
                     {items.map((item, idx) => (
                         <li key={idx} className="flex items-start gap-3">
                             <RoadmapCheckbox completed={item.completed} />
-                            <span className={`${item.completed ? 'text-blue-200' : 'text-gray-400'} transition-colors`}>
+                            <span className={`${item.completed ? 'text-white' : 'text-gray-400'} transition-colors`}>
                 {item.text}
               </span>
                         </li>
